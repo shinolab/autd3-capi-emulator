@@ -84,17 +84,9 @@ jobs:
           script: |
             return 'autd3-'+context.payload.ref.replace(/refs\/tags\//, '')+'-${{ matrix.name }}-${{ matrix.arch }}';
       - run: |
-          python3 build.py build --release --arch ${{ matrix.arch }} --features "static"
-          Compress-Archive -Path LICENSE, lib, ThirdPartyNotice.txt -DestinationPath assets-static.zip
-        if: ${{ matrix.os == 'windows-latest' }}
-      - run: |
           python3 build.py build --release --arch ${{ matrix.arch }}
           Compress-Archive -Path LICENSE, bin, ThirdPartyNotice.txt -DestinationPath assets-shared.zip
         if: ${{ matrix.os == 'windows-latest' }}
-      - run: |
-          python3 build.py build --release --arch ${{ matrix.arch }} --features "static"
-          tar -zcvf assets-static.tar.gz lib LICENSE ThirdPartyNotice.txt
-        if: ${{ matrix.os != 'windows-latest' }}
       - run: |
           python3 build.py build --release --arch ${{ matrix.arch }}
           tar -zcvf assets-shared.tar.gz bin LICENSE ThirdPartyNotice.txt
@@ -112,11 +104,4 @@ jobs:
           upload_url: ${{ steps.get_release_info.outputs.content }}
           asset_path: ./assets-shared.${{ matrix.os == 'windows-latest' && 'zip' || 'tar.gz' }}
           asset_name: ${{ steps.get_version.outputs.result }}-shared.${{ matrix.os == 'windows-latest' && 'zip' || 'tar.gz' }}
-          asset_content_type: ${{ matrix.os == 'windows-latest' && 'application/zip' || 'application/octet-stream' }}
-      - uses: shogo82148/actions-upload-release-asset@v1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          upload_url: ${{ steps.get_release_info.outputs.content }}
-          asset_path: ./assets-static.${{ matrix.os == 'windows-latest' && 'zip' || 'tar.gz' }}
-          asset_name: ${{ steps.get_version.outputs.result }}-static.${{ matrix.os == 'windows-latest' && 'zip' || 'tar.gz' }}
           asset_content_type: ${{ matrix.os == 'windows-latest' && 'application/zip' || 'application/octet-stream' }}
