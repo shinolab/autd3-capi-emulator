@@ -3,7 +3,7 @@ use crate::range::*;
 use crate::result::*;
 
 use autd3_emulator::Rms;
-use autd3capi_driver::{async_ffi::*, Duration, *};
+use autd3capi_driver::{Duration, *};
 
 #[repr(C)]
 pub struct RmsRecordOption {
@@ -28,26 +28,13 @@ pub unsafe extern "C" fn AUTDEmulatorSoundFieldRms(
     record: RecordPtr,
     range: RangeXYZ,
     option: RmsRecordOption,
-) -> LocalFfiFuture<ResultRms> {
-    async move {
-        let r = record
-            .sound_field(
-                autd3_emulator::RangeXYZ::from(range),
-                autd3_emulator::RmsRecordOption::from(option),
-            )
-            .await;
-        r.into()
-    }
-    .into_local_ffi()
-}
-
-#[no_mangle]
-#[must_use]
-pub unsafe extern "C" fn AUTDEmulatorSoundFieldRmsWait(
-    handle: HandlePtr,
-    future: LocalFfiFuture<ResultRms>,
 ) -> ResultRms {
-    handle.block_on(future)
+    record
+        .sound_field(
+            autd3_emulator::RangeXYZ::from(range),
+            autd3_emulator::RmsRecordOption::from(option),
+        )
+        .into()
 }
 
 #[no_mangle]
@@ -94,14 +81,10 @@ pub unsafe extern "C" fn AUTDEmulatorSoundFieldRmsGetZ(sound_field: RmsPtr, z: *
 pub unsafe extern "C" fn AUTDEmulatorSoundFieldRmsSkip(
     mut sound_field: RmsPtr,
     duration: Duration,
-) -> LocalFfiFuture<ResultStatus> {
-    async move {
-        sound_field
-            .next_inplace(duration.into(), true, &mut [], std::iter::empty())
-            .await
-            .into()
-    }
-    .into_local_ffi()
+) -> ResultStatus {
+    sound_field
+        .next_inplace(duration.into(), true, &mut [], std::iter::empty())
+        .into()
 }
 
 #[no_mangle]
@@ -111,17 +94,13 @@ pub unsafe extern "C" fn AUTDEmulatorSoundFieldRmsNext(
     duration: Duration,
     time: *mut u64,
     v: *const *mut f32,
-) -> LocalFfiFuture<ResultStatus> {
+) -> ResultStatus {
     let n = sound_field.next_time_len(duration.into());
     let time = std::slice::from_raw_parts_mut(time, n as _);
     let iter = (0..n).map(move |i| v.add(i as _).read());
-    async move {
-        sound_field
-            .next_inplace(duration.into(), false, time, iter)
-            .await
-            .into()
-    }
-    .into_local_ffi()
+    sound_field
+        .next_inplace(duration.into(), false, time, iter)
+        .into()
 }
 
 #[no_mangle]
