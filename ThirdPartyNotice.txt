@@ -6,24 +6,8 @@ The license terms for each of these components are provided later in this notice
 
 ---------------------------------------------------------
 
-addr2line 0.24.2 (Apache-2.0 OR MIT)
-https://github.com/gimli-rs/addr2line
----------------------------------------------------------
-
-adler2 2.0.0 (0BSD OR Apache-2.0 OR MIT)
-https://github.com/oyvindln/adler2
----------------------------------------------------------
-
-ahash 0.8.11 (Apache-2.0 OR MIT)
-https://github.com/tkaitchuck/ahash
----------------------------------------------------------
-
 aho-corasick 1.1.3 (MIT OR Unlicense)
 https://github.com/BurntSushi/aho-corasick
----------------------------------------------------------
-
-allocator-api2 0.2.21 (Apache-2.0 OR MIT)
-https://github.com/zakarumych/allocator-api2
 ---------------------------------------------------------
 
 android_system_properties 0.1.5 (Apache-2.0 OR MIT)
@@ -34,14 +18,6 @@ approx 0.5.1 (Apache-2.0)
 https://github.com/brendanzab/approx
 ---------------------------------------------------------
 
-argminmax 0.6.2 (MIT)
-https://github.com/jvdd/argminmax
----------------------------------------------------------
-
-array-init-cursor 0.2.0 (Apache-2.0 OR MIT)
-https://github.com/planus-org/planus
----------------------------------------------------------
-
 arrayvec 0.7.6 (Apache-2.0 OR MIT)
 https://github.com/bluss/arrayvec
 ---------------------------------------------------------
@@ -50,52 +26,36 @@ ash 0.38.0+1.3.281 (Apache-2.0 OR MIT)
 https://github.com/ash-rs/ash
 ---------------------------------------------------------
 
-async-ffi 0.5.0 (MIT)
-https://github.com/oxalica/async-ffi
----------------------------------------------------------
-
-async-trait 0.1.85 (Apache-2.0 OR MIT)
-https://github.com/dtolnay/async-trait
----------------------------------------------------------
-
-atoi_simd 0.16.0 (Apache-2.0 OR MIT)
-https://github.com/RoDmitry/atoi_simd
----------------------------------------------------------
-
-autd3 29.0.0-rc.13 (MIT)
+autd3 29.0.0-rc.16 (MIT)
 https://github.com/shinolab/autd3-rs
 ---------------------------------------------------------
 
-autd3-derive 29.0.0-rc.13 (MIT)
+autd3-core 29.0.0-rc.16 (MIT)
 https://github.com/shinolab/autd3-rs
 ---------------------------------------------------------
 
-autd3-driver 29.0.0-rc.13 (MIT)
+autd3-derive 29.0.0-rc.16 (MIT)
 https://github.com/shinolab/autd3-rs
 ---------------------------------------------------------
 
-autd3-emulator 29.0.0-rc.13 (MIT)
+autd3-driver 29.0.0-rc.16 (MIT)
+https://github.com/shinolab/autd3-rs
+---------------------------------------------------------
+
+autd3-emulator 29.0.0-rc.16 (MIT)
 https://github.com/shinolab/autd3-emulator
 ---------------------------------------------------------
 
-autd3-firmware-emulator 29.0.0-rc.13 (MIT)
+autd3-firmware-emulator 29.0.0-rc.16 (MIT)
 https://github.com/shinolab/autd3-rs
 ---------------------------------------------------------
 
-autd3capi-driver 29.0.0-rc.13 (MIT)
+autd3capi-driver 29.0.0-rc.16 (MIT)
 https://github.com/shinolab/autd3-capi
 ---------------------------------------------------------
 
-autd3capi-emulator 29.0.0-rc.13 (MIT)
+autd3capi-emulator 29.0.0-rc.16 (MIT)
 https://github.com/shinolab/autd3-capi-emulator
----------------------------------------------------------
-
-backtrace 0.3.74 (Apache-2.0 OR MIT)
-https://github.com/rust-lang/backtrace-rs
----------------------------------------------------------
-
-base64 0.22.1 (Apache-2.0 OR MIT)
-https://github.com/marshallpierce/rust-base64
 ---------------------------------------------------------
 
 bit-set 0.8.0 (Apache-2.0 OR MIT)
@@ -114,7 +74,7 @@ bitflags 1.3.2 (Apache-2.0 OR MIT)
 https://github.com/bitflags/bitflags
 ---------------------------------------------------------
 
-bitflags 2.6.0 (Apache-2.0 OR MIT)
+bitflags 2.8.0 (Apache-2.0 OR MIT)
 https://github.com/bitflags/bitflags
 ---------------------------------------------------------
 
@@ -142,32 +102,12 @@ byteorder 1.5.0 (MIT OR Unlicense)
 https://github.com/BurntSushi/byteorder
 ---------------------------------------------------------
 
-bytes 1.9.0 (MIT)
-https://github.com/tokio-rs/bytes
----------------------------------------------------------
-
-castaway 0.2.3 (MIT)
-https://github.com/sagebind/castaway
----------------------------------------------------------
-
 cfg-if 1.0.0 (Apache-2.0 OR MIT)
 https://github.com/alexcrichton/cfg-if
 ---------------------------------------------------------
 
-chrono 0.4.39 (Apache-2.0 OR MIT)
-https://github.com/chronotope/chrono
----------------------------------------------------------
-
-chrono-tz 0.10.0 (Apache-2.0 OR MIT)
-https://github.com/chronotope/chrono-tz
----------------------------------------------------------
-
 codespan-reporting 0.11.1 (Apache-2.0)
 https://github.com/brendanzab/codespan
----------------------------------------------------------
-
-compact_str 0.8.1 (MIT)
-https://github.com/ParkMyCar/compact_str
 ---------------------------------------------------------
 
 console 0.15.10 (MIT)
@@ -186,19 +126,11 @@ core-graphics-types 0.1.3 (Apache-2.0 OR MIT)
 https://github.com/servo/core-foundation-rs
 ---------------------------------------------------------
 
-crossbeam-channel 0.5.14 (Apache-2.0 OR MIT)
-https://github.com/crossbeam-rs/crossbeam
----------------------------------------------------------
-
 crossbeam-deque 0.8.6 (Apache-2.0 OR MIT)
 https://github.com/crossbeam-rs/crossbeam
 ---------------------------------------------------------
 
 crossbeam-epoch 0.9.18 (Apache-2.0 OR MIT)
-https://github.com/crossbeam-rs/crossbeam
----------------------------------------------------------
-
-crossbeam-queue 0.3.12 (Apache-2.0 OR MIT)
 https://github.com/crossbeam-rs/crossbeam
 ---------------------------------------------------------
 
@@ -226,10 +158,6 @@ document-features 0.2.10 (Apache-2.0 OR MIT)
 https://github.com/slint-ui/document-features
 ---------------------------------------------------------
 
-dyn-clone 1.0.17 (Apache-2.0 OR MIT)
-https://github.com/dtolnay/dyn-clone
----------------------------------------------------------
-
 either 1.13.0 (Apache-2.0 OR MIT)
 https://github.com/rayon-rs/either
 ---------------------------------------------------------
@@ -238,24 +166,8 @@ encode_unicode 1.0.0 (Apache-2.0 OR MIT)
 https://github.com/tormol/encode_unicode
 ---------------------------------------------------------
 
-enum_dispatch 0.3.13 (Apache-2.0 OR MIT)
-https://gitlab.com/antonok/enum_dispatch
----------------------------------------------------------
-
 equivalent 1.0.1 (Apache-2.0 OR MIT)
 https://github.com/cuviper/equivalent
----------------------------------------------------------
-
-ethnum 1.5.0 (Apache-2.0 OR MIT)
-https://github.com/nlordell/ethnum-rs
----------------------------------------------------------
-
-fallible-streaming-iterator 0.1.9 (Apache-2.0 OR MIT)
-https://github.com/sfackler/fallible-streaming-iterator
----------------------------------------------------------
-
-fast-float2 0.2.3 (Apache-2.0 OR MIT)
-https://github.com/Alexhuszagh/fast-float-rust
 ---------------------------------------------------------
 
 flume 0.11.1 (Apache-2.0 OR MIT)
@@ -278,31 +190,19 @@ foreign-types-shared 0.3.1 (Apache-2.0 OR MIT)
 https://github.com/sfackler/foreign-types
 ---------------------------------------------------------
 
-futures-core 0.3.31 (Apache-2.0 OR MIT)
-https://github.com/rust-lang/futures-rs
----------------------------------------------------------
-
-futures-sink 0.3.31 (Apache-2.0 OR MIT)
-https://github.com/rust-lang/futures-rs
----------------------------------------------------------
-
 getrandom 0.2.15 (Apache-2.0 OR MIT)
 https://github.com/rust-random/getrandom
 ---------------------------------------------------------
 
-gimli 0.31.1 (Apache-2.0 OR MIT)
-https://github.com/gimli-rs/gimli
+getset 0.1.3 (MIT)
+https://github.com/jbaublitz/getset
 ---------------------------------------------------------
 
-glob 0.3.2 (Apache-2.0 OR MIT)
-https://github.com/rust-lang/glob
----------------------------------------------------------
-
-glow 0.14.2 (Apache-2.0 OR MIT OR Zlib)
+glow 0.16.0 (Apache-2.0 OR MIT OR Zlib)
 https://github.com/grovesNL/glow
 ---------------------------------------------------------
 
-glutin_wgl_sys 0.6.0 (Apache-2.0)
+glutin_wgl_sys 0.6.1 (Apache-2.0)
 https://github.com/rust-windowing/glutin
 ---------------------------------------------------------
 
@@ -326,10 +226,6 @@ gpu-descriptor-types 0.2.0 (Apache-2.0 OR MIT)
 https://github.com/zakarumych/gpu-descriptor
 ---------------------------------------------------------
 
-hashbrown 0.14.5 (Apache-2.0 OR MIT)
-https://github.com/rust-lang/hashbrown
----------------------------------------------------------
-
 hashbrown 0.15.2 (Apache-2.0 OR MIT)
 https://github.com/rust-lang/hashbrown
 ---------------------------------------------------------
@@ -340,10 +236,6 @@ https://github.com/withoutboats/heck
 
 hexf-parse 0.2.1 (CC0-1.0)
 https://github.com/lifthrasiir/hexf
----------------------------------------------------------
-
-home 0.5.11 (Apache-2.0 OR MIT)
-https://github.com/rust-lang/cargo
 ---------------------------------------------------------
 
 indexmap 2.7.0 (Apache-2.0 OR MIT)
@@ -358,19 +250,11 @@ itertools 0.14.0 (Apache-2.0 OR MIT)
 https://github.com/rust-itertools/itertools
 ---------------------------------------------------------
 
-itoa 1.0.14 (Apache-2.0 OR MIT)
-https://github.com/dtolnay/itoa
----------------------------------------------------------
-
-itoap 1.0.1 (MIT)
-https://github.com/Kogia-sima/itoap
----------------------------------------------------------
-
 jni-sys 0.3.0 (Apache-2.0 OR MIT)
 https://github.com/sfackler/rust-jni-sys
 ---------------------------------------------------------
 
-js-sys 0.3.76 (Apache-2.0 OR MIT)
+js-sys 0.3.77 (Apache-2.0 OR MIT)
 https://github.com/rustwasm/wasm-bindgen/tree/master/crates/js-sys
 ---------------------------------------------------------
 
@@ -390,10 +274,6 @@ libloading 0.8.6 (ISC)
 https://github.com/nagisa/rust_libloading/
 ---------------------------------------------------------
 
-libm 0.2.11 (Apache-2.0) OR MIT AND (MIT)
-https://github.com/rust-lang/libm
----------------------------------------------------------
-
 litrs 0.4.1 (Apache-2.0 OR MIT)
 https://github.com/LukasKalbertodt/litrs/
 ---------------------------------------------------------
@@ -402,16 +282,8 @@ lock_api 0.4.12 (Apache-2.0 OR MIT)
 https://github.com/Amanieu/parking_lot
 ---------------------------------------------------------
 
-log 0.4.22 (Apache-2.0 OR MIT)
+log 0.4.25 (Apache-2.0 OR MIT)
 https://github.com/rust-lang/log
----------------------------------------------------------
-
-lz4 1.28.1 (MIT)
-https://github.com/10xGenomics/lz4-rs
----------------------------------------------------------
-
-lz4-sys 1.11.1+lz4-1.10.0 (MIT)
-https://github.com/10xGenomics/lz4-rs
 ---------------------------------------------------------
 
 malloc_buf 0.0.6 (MIT)
@@ -430,11 +302,7 @@ memchr 2.7.4 (MIT OR Unlicense)
 https://github.com/BurntSushi/memchr
 ---------------------------------------------------------
 
-memmap2 0.9.5 (Apache-2.0 OR MIT)
-https://github.com/RazrFalcon/memmap2-rs
----------------------------------------------------------
-
-metal 0.29.0 (Apache-2.0 OR MIT)
+metal 0.31.0 (Apache-2.0 OR MIT)
 https://github.com/gfx-rs/metal-rs
 ---------------------------------------------------------
 
@@ -442,19 +310,7 @@ minimal-lexical 0.2.1 (Apache-2.0 OR MIT)
 https://github.com/Alexhuszagh/minimal-lexical
 ---------------------------------------------------------
 
-miniz_oxide 0.8.2 (Apache-2.0 OR MIT OR Zlib)
-https://github.com/Frommi/miniz_oxide/tree/master/miniz_oxide
----------------------------------------------------------
-
-multiversion 0.7.4 (Apache-2.0 OR MIT)
-https://github.com/calebzulawski/multiversion
----------------------------------------------------------
-
-multiversion-macros 0.7.4 (Apache-2.0 OR MIT)
-https://github.com/calebzulawski/multiversion
----------------------------------------------------------
-
-naga 23.1.0 (Apache-2.0 OR MIT)
+naga 24.0.0 (Apache-2.0 OR MIT)
 https://github.com/gfx-rs/wgpu/tree/trunk/naga
 ---------------------------------------------------------
 
@@ -472,10 +328,6 @@ https://github.com/rust-mobile/ndk
 
 nom 7.1.3 (MIT)
 https://github.com/Geal/nom
----------------------------------------------------------
-
-ntapi 0.4.1 (Apache-2.0 OR MIT)
-https://github.com/MSxDOS/ntapi
 ---------------------------------------------------------
 
 nu-ansi-term 0.46.0 (MIT)
@@ -522,12 +374,12 @@ objc 0.2.7 (MIT)
 http://github.com/SSheldon/rust-objc
 ---------------------------------------------------------
 
-object 0.36.7 (Apache-2.0 OR MIT)
-https://github.com/gimli-rs/object
----------------------------------------------------------
-
 once_cell 1.20.2 (Apache-2.0 OR MIT)
 https://github.com/matklad/once_cell
+---------------------------------------------------------
+
+ordered-float 4.6.0 (MIT)
+https://github.com/reem/rust-ordered-float
 ---------------------------------------------------------
 
 overload 0.1.1 (MIT)
@@ -546,96 +398,12 @@ paste 1.0.15 (Apache-2.0 OR MIT)
 https://github.com/dtolnay/paste
 ---------------------------------------------------------
 
-percent-encoding 2.3.1 (Apache-2.0 OR MIT)
-https://github.com/servo/rust-url/
----------------------------------------------------------
-
-phf 0.11.3 (MIT)
-https://github.com/rust-phf/rust-phf
----------------------------------------------------------
-
-phf_shared 0.11.3 (MIT)
-https://github.com/rust-phf/rust-phf
----------------------------------------------------------
-
 pin-project-lite 0.2.16 (Apache-2.0 OR MIT)
 https://github.com/taiki-e/pin-project-lite
 ---------------------------------------------------------
 
-planus 0.3.1 (Apache-2.0 OR MIT)
-https://github.com/planus-org/planus
----------------------------------------------------------
-
-polars 0.45.1 (MIT)
-https://github.com/pola-rs/polars
----------------------------------------------------------
-
-polars-arrow 0.45.1 (MIT AND Apache-2.0)
-https://github.com/pola-rs/polars
----------------------------------------------------------
-
-polars-arrow-format 0.1.0 (Apache-2.0)
-https://github.com/pola-rs/arrow-format
----------------------------------------------------------
-
-polars-compute 0.45.1 (MIT)
-https://github.com/pola-rs/polars
----------------------------------------------------------
-
-polars-core 0.45.1 (MIT)
-https://github.com/pola-rs/polars
----------------------------------------------------------
-
-polars-error 0.45.1 (MIT)
-https://github.com/pola-rs/polars
----------------------------------------------------------
-
-polars-expr 0.45.1 (MIT)
-https://github.com/pola-rs/polars
----------------------------------------------------------
-
-polars-io 0.45.1 (MIT)
-https://github.com/pola-rs/polars
----------------------------------------------------------
-
-polars-lazy 0.45.1 (MIT)
-https://github.com/pola-rs/polars
----------------------------------------------------------
-
-polars-mem-engine 0.45.1 (MIT)
-https://github.com/pola-rs/polars
----------------------------------------------------------
-
-polars-ops 0.45.1 (MIT)
-https://github.com/pola-rs/polars
----------------------------------------------------------
-
-polars-parquet 0.45.1 (MIT AND Apache-2.0)
-https://github.com/pola-rs/polars
----------------------------------------------------------
-
-polars-parquet-format 0.1.0 (MIT AND Apache-2.0)
-https://github.com/pola-rs/parquet-format
----------------------------------------------------------
-
-polars-pipe 0.45.1 (MIT)
-https://github.com/pola-rs/polars
----------------------------------------------------------
-
-polars-plan 0.45.1 (MIT)
-https://github.com/pola-rs/polars
----------------------------------------------------------
-
-polars-row 0.45.1 (MIT)
-https://github.com/pola-rs/polars
----------------------------------------------------------
-
-polars-schema 0.45.1 (MIT)
-https://github.com/pola-rs/polars
----------------------------------------------------------
-
-polars-utils 0.45.1 (MIT)
-https://github.com/pola-rs/polars
+pollster 0.4.0 (Apache-2.0 OR MIT)
+https://github.com/zesterer/pollster
 ---------------------------------------------------------
 
 portable-atomic 1.10.0 (Apache-2.0 OR MIT)
@@ -654,16 +422,20 @@ presser 0.3.1 (Apache-2.0 OR MIT)
 https://github.com/EmbarkStudios/presser
 ---------------------------------------------------------
 
-proc-macro2 1.0.92 (Apache-2.0 OR MIT)
+proc-macro-error-attr2 2.0.0 (Apache-2.0 OR MIT)
+https://github.com/GnomedDev/proc-macro-error-2
+---------------------------------------------------------
+
+proc-macro-error2 2.0.1 (Apache-2.0 OR MIT)
+https://github.com/GnomedDev/proc-macro-error-2
+---------------------------------------------------------
+
+proc-macro2 1.0.93 (Apache-2.0 OR MIT)
 https://github.com/dtolnay/proc-macro2
 ---------------------------------------------------------
 
 profiling 1.0.16 (Apache-2.0 OR MIT)
 https://github.com/aclysma/profiling
----------------------------------------------------------
-
-psm 0.1.24 (Apache-2.0 OR MIT)
-https://github.com/rust-lang/stacker/
 ---------------------------------------------------------
 
 quote 1.0.38 (Apache-2.0 OR MIT)
@@ -682,16 +454,8 @@ rand_core 0.6.4 (Apache-2.0 OR MIT)
 https://github.com/rust-random/rand
 ---------------------------------------------------------
 
-rand_distr 0.4.3 (Apache-2.0 OR MIT)
-https://github.com/rust-random/rand
----------------------------------------------------------
-
 range-alloc 0.1.3 (Apache-2.0 OR MIT)
 https://github.com/gfx-rs/range-alloc
----------------------------------------------------------
-
-raw-cpuid 11.2.0 (MIT)
-https://github.com/gz/rust-cpuid
 ---------------------------------------------------------
 
 raw-window-handle 0.6.2 (Apache-2.0 OR MIT OR Zlib)
@@ -708,14 +472,6 @@ https://github.com/rayon-rs/rayon
 
 rayon-core 1.12.1 (Apache-2.0 OR MIT)
 https://github.com/rayon-rs/rayon
----------------------------------------------------------
-
-recursive 0.1.1 (MIT)
-https://github.com/orlp/recursive
----------------------------------------------------------
-
-recursive-proc-macro-impl 0.1.1 (MIT)
-https://github.com/orlp/recursive
 ---------------------------------------------------------
 
 redox_syscall 0.5.8 (MIT)
@@ -746,20 +502,12 @@ renderdoc-sys 1.1.0 (Apache-2.0 OR MIT)
 https://github.com/ebkalderon/renderdoc-rs
 ---------------------------------------------------------
 
-rustc-demangle 0.1.24 (Apache-2.0 OR MIT)
-https://github.com/rust-lang/rustc-demangle
----------------------------------------------------------
-
 rustc-hash 1.1.0 (Apache-2.0 OR MIT)
 https://github.com/rust-lang-nursery/rustc-hash
 ---------------------------------------------------------
 
 rustversion 1.0.19 (Apache-2.0 OR MIT)
 https://github.com/dtolnay/rustversion
----------------------------------------------------------
-
-ryu 1.0.18 (Apache-2.0 OR BSL-1.0)
-https://github.com/dtolnay/ryu
 ---------------------------------------------------------
 
 safe_arch 0.7.4 (Apache-2.0 OR MIT OR Zlib)
@@ -790,14 +538,6 @@ simba 0.9.0 (Apache-2.0)
 https://github.com/dimforge/simba
 ---------------------------------------------------------
 
-simdutf8 0.1.5 (Apache-2.0 OR MIT)
-https://github.com/rusticstuff/simdutf8
----------------------------------------------------------
-
-siphasher 1.0.1 (Apache-2.0 OR MIT)
-https://github.com/jedisct1/rust-siphash
----------------------------------------------------------
-
 slotmap 1.0.7 (Zlib)
 https://github.com/orlp/slotmap
 ---------------------------------------------------------
@@ -818,44 +558,20 @@ spirv 0.3.0+sdk-1.3.268.0 (Apache-2.0)
 https://github.com/gfx-rs/rspirv
 ---------------------------------------------------------
 
-stacker 0.1.17 (Apache-2.0 OR MIT)
-https://github.com/rust-lang/stacker
----------------------------------------------------------
-
 static_assertions 1.1.0 (Apache-2.0 OR MIT)
 https://github.com/nvzqz/static-assertions-rs
 ---------------------------------------------------------
 
-streaming-decompression 0.1.2 (Apache-2.0)
-https://github.com/jorgecarleitao/streaming-decompressor
----------------------------------------------------------
-
-streaming-iterator 0.1.9 (Apache-2.0 OR MIT)
-https://github.com/sfackler/streaming-iterator
----------------------------------------------------------
-
-strength_reduce 0.2.4 (Apache-2.0 OR MIT)
-http://github.com/ejmahler/strength_reduce
+strum 0.26.3 (MIT)
+https://github.com/Peternator7/strum
 ---------------------------------------------------------
 
 strum_macros 0.26.4 (MIT)
 https://github.com/Peternator7/strum
 ---------------------------------------------------------
 
-syn 1.0.109 (Apache-2.0 OR MIT)
+syn 2.0.96 (Apache-2.0 OR MIT)
 https://github.com/dtolnay/syn
----------------------------------------------------------
-
-syn 2.0.95 (Apache-2.0 OR MIT)
-https://github.com/dtolnay/syn
----------------------------------------------------------
-
-sysinfo 0.32.1 (MIT)
-https://github.com/GuillaumeGomez/sysinfo
----------------------------------------------------------
-
-target-features 0.1.6 (Apache-2.0 OR MIT)
-https://github.com/calebzulawski/target-features
 ---------------------------------------------------------
 
 termcolor 1.4.1 (MIT OR Unlicense)
@@ -866,7 +582,7 @@ thiserror 1.0.69 (Apache-2.0 OR MIT)
 https://github.com/dtolnay/thiserror
 ---------------------------------------------------------
 
-thiserror 2.0.9 (Apache-2.0 OR MIT)
+thiserror 2.0.11 (Apache-2.0 OR MIT)
 https://github.com/dtolnay/thiserror
 ---------------------------------------------------------
 
@@ -874,7 +590,7 @@ thiserror-impl 1.0.69 (Apache-2.0 OR MIT)
 https://github.com/dtolnay/thiserror
 ---------------------------------------------------------
 
-thiserror-impl 2.0.9 (Apache-2.0 OR MIT)
+thiserror-impl 2.0.11 (Apache-2.0 OR MIT)
 https://github.com/dtolnay/thiserror
 ---------------------------------------------------------
 
@@ -892,10 +608,6 @@ https://github.com/time-rs/time
 
 time-macros 0.2.19 (Apache-2.0 OR MIT)
 https://github.com/time-rs/time
----------------------------------------------------------
-
-tokio 1.42.0 (MIT)
-https://github.com/tokio-rs/tokio
 ---------------------------------------------------------
 
 tracing 0.1.41 (MIT)
@@ -937,10 +649,6 @@ https://github.com/unicode-rs/unicode-xid
 unzip3 1.0.0 (MIT)
 ---------------------------------------------------------
 
-uuid 1.11.0 (Apache-2.0 OR MIT)
-https://github.com/uuid-rs/uuid
----------------------------------------------------------
-
 visibility 0.1.1 (Apache-2.0 OR MIT OR Zlib)
 https://github.com/danielhenrymantilla/visibility.rs
 ---------------------------------------------------------
@@ -949,31 +657,31 @@ wasi 0.11.0+wasi-snapshot-preview1 (Apache-2.0 OR Apache-2.0 WITH LLVM-exception
 https://github.com/bytecodealliance/wasi
 ---------------------------------------------------------
 
-wasm-bindgen 0.2.99 (Apache-2.0 OR MIT)
+wasm-bindgen 0.2.100 (Apache-2.0 OR MIT)
 https://github.com/rustwasm/wasm-bindgen
 ---------------------------------------------------------
 
-wasm-bindgen-backend 0.2.99 (Apache-2.0 OR MIT)
+wasm-bindgen-backend 0.2.100 (Apache-2.0 OR MIT)
 https://github.com/rustwasm/wasm-bindgen/tree/master/crates/backend
 ---------------------------------------------------------
 
-wasm-bindgen-futures 0.4.49 (Apache-2.0 OR MIT)
+wasm-bindgen-futures 0.4.50 (Apache-2.0 OR MIT)
 https://github.com/rustwasm/wasm-bindgen/tree/master/crates/futures
 ---------------------------------------------------------
 
-wasm-bindgen-macro 0.2.99 (Apache-2.0 OR MIT)
+wasm-bindgen-macro 0.2.100 (Apache-2.0 OR MIT)
 https://github.com/rustwasm/wasm-bindgen/tree/master/crates/macro
 ---------------------------------------------------------
 
-wasm-bindgen-macro-support 0.2.99 (Apache-2.0 OR MIT)
+wasm-bindgen-macro-support 0.2.100 (Apache-2.0 OR MIT)
 https://github.com/rustwasm/wasm-bindgen/tree/master/crates/macro-support
 ---------------------------------------------------------
 
-wasm-bindgen-shared 0.2.99 (Apache-2.0 OR MIT)
+wasm-bindgen-shared 0.2.100 (Apache-2.0 OR MIT)
 https://github.com/rustwasm/wasm-bindgen/tree/master/crates/shared
 ---------------------------------------------------------
 
-web-sys 0.3.76 (Apache-2.0 OR MIT)
+web-sys 0.3.77 (Apache-2.0 OR MIT)
 https://github.com/rustwasm/wasm-bindgen/tree/master/crates/web-sys
 ---------------------------------------------------------
 
@@ -981,19 +689,19 @@ web-time 1.1.0 (Apache-2.0 OR MIT)
 https://github.com/daxpedda/web-time
 ---------------------------------------------------------
 
-wgpu 23.0.1 (Apache-2.0 OR MIT)
+wgpu 24.0.0 (Apache-2.0 OR MIT)
 https://github.com/gfx-rs/wgpu
 ---------------------------------------------------------
 
-wgpu-core 23.0.1 (Apache-2.0 OR MIT)
+wgpu-core 24.0.0 (Apache-2.0 OR MIT)
 https://github.com/gfx-rs/wgpu
 ---------------------------------------------------------
 
-wgpu-hal 23.0.1 (Apache-2.0 OR MIT)
+wgpu-hal 24.0.0 (Apache-2.0 OR MIT)
 https://github.com/gfx-rs/wgpu
 ---------------------------------------------------------
 
-wgpu-types 23.0.0 (Apache-2.0 OR MIT)
+wgpu-types 24.0.0 (Apache-2.0 OR MIT)
 https://github.com/gfx-rs/wgpu
 ---------------------------------------------------------
 
@@ -1017,15 +725,11 @@ winapi-x86_64-pc-windows-gnu 0.4.0 (Apache-2.0 OR MIT)
 https://github.com/retep998/winapi-rs
 ---------------------------------------------------------
 
-windows 0.57.0 (Apache-2.0 OR MIT)
-https://github.com/microsoft/windows-rs
----------------------------------------------------------
-
 windows 0.58.0 (Apache-2.0 OR MIT)
 https://github.com/microsoft/windows-rs
 ---------------------------------------------------------
 
-windows-core 0.57.0 (Apache-2.0 OR MIT)
+windows 0.59.0 (Apache-2.0 OR MIT)
 https://github.com/microsoft/windows-rs
 ---------------------------------------------------------
 
@@ -1033,7 +737,7 @@ windows-core 0.58.0 (Apache-2.0 OR MIT)
 https://github.com/microsoft/windows-rs
 ---------------------------------------------------------
 
-windows-implement 0.57.0 (Apache-2.0 OR MIT)
+windows-core 0.59.0 (Apache-2.0 OR MIT)
 https://github.com/microsoft/windows-rs
 ---------------------------------------------------------
 
@@ -1041,7 +745,7 @@ windows-implement 0.58.0 (Apache-2.0 OR MIT)
 https://github.com/microsoft/windows-rs
 ---------------------------------------------------------
 
-windows-interface 0.57.0 (Apache-2.0 OR MIT)
+windows-implement 0.59.0 (Apache-2.0 OR MIT)
 https://github.com/microsoft/windows-rs
 ---------------------------------------------------------
 
@@ -1049,7 +753,7 @@ windows-interface 0.58.0 (Apache-2.0 OR MIT)
 https://github.com/microsoft/windows-rs
 ---------------------------------------------------------
 
-windows-result 0.1.2 (Apache-2.0 OR MIT)
+windows-interface 0.59.0 (Apache-2.0 OR MIT)
 https://github.com/microsoft/windows-rs
 ---------------------------------------------------------
 
@@ -1057,7 +761,15 @@ windows-result 0.2.0 (Apache-2.0 OR MIT)
 https://github.com/microsoft/windows-rs
 ---------------------------------------------------------
 
+windows-result 0.3.0 (Apache-2.0 OR MIT)
+https://github.com/microsoft/windows-rs
+---------------------------------------------------------
+
 windows-strings 0.1.0 (Apache-2.0 OR MIT)
+https://github.com/microsoft/windows-rs
+---------------------------------------------------------
+
+windows-strings 0.3.0 (Apache-2.0 OR MIT)
 https://github.com/microsoft/windows-rs
 ---------------------------------------------------------
 
@@ -1069,7 +781,15 @@ windows-targets 0.52.6 (Apache-2.0 OR MIT)
 https://github.com/microsoft/windows-rs
 ---------------------------------------------------------
 
+windows-targets 0.53.0 (Apache-2.0 OR MIT)
+https://github.com/microsoft/windows-rs
+---------------------------------------------------------
+
 windows_aarch64_gnullvm 0.52.6 (Apache-2.0 OR MIT)
+https://github.com/microsoft/windows-rs
+---------------------------------------------------------
+
+windows_aarch64_gnullvm 0.53.0 (Apache-2.0 OR MIT)
 https://github.com/microsoft/windows-rs
 ---------------------------------------------------------
 
@@ -1077,7 +797,15 @@ windows_aarch64_msvc 0.52.6 (Apache-2.0 OR MIT)
 https://github.com/microsoft/windows-rs
 ---------------------------------------------------------
 
+windows_aarch64_msvc 0.53.0 (Apache-2.0 OR MIT)
+https://github.com/microsoft/windows-rs
+---------------------------------------------------------
+
 windows_i686_gnu 0.52.6 (Apache-2.0 OR MIT)
+https://github.com/microsoft/windows-rs
+---------------------------------------------------------
+
+windows_i686_gnu 0.53.0 (Apache-2.0 OR MIT)
 https://github.com/microsoft/windows-rs
 ---------------------------------------------------------
 
@@ -1085,7 +813,15 @@ windows_i686_gnullvm 0.52.6 (Apache-2.0 OR MIT)
 https://github.com/microsoft/windows-rs
 ---------------------------------------------------------
 
+windows_i686_gnullvm 0.53.0 (Apache-2.0 OR MIT)
+https://github.com/microsoft/windows-rs
+---------------------------------------------------------
+
 windows_i686_msvc 0.52.6 (Apache-2.0 OR MIT)
+https://github.com/microsoft/windows-rs
+---------------------------------------------------------
+
+windows_i686_msvc 0.53.0 (Apache-2.0 OR MIT)
 https://github.com/microsoft/windows-rs
 ---------------------------------------------------------
 
@@ -1093,7 +829,15 @@ windows_x86_64_gnu 0.52.6 (Apache-2.0 OR MIT)
 https://github.com/microsoft/windows-rs
 ---------------------------------------------------------
 
+windows_x86_64_gnu 0.53.0 (Apache-2.0 OR MIT)
+https://github.com/microsoft/windows-rs
+---------------------------------------------------------
+
 windows_x86_64_gnullvm 0.52.6 (Apache-2.0 OR MIT)
+https://github.com/microsoft/windows-rs
+---------------------------------------------------------
+
+windows_x86_64_gnullvm 0.53.0 (Apache-2.0 OR MIT)
 https://github.com/microsoft/windows-rs
 ---------------------------------------------------------
 
@@ -1101,8 +845,8 @@ windows_x86_64_msvc 0.52.6 (Apache-2.0 OR MIT)
 https://github.com/microsoft/windows-rs
 ---------------------------------------------------------
 
-xxhash-rust 0.8.15 (BSL-1.0)
-https://github.com/DoumanAsh/xxhash-rust
+windows_x86_64_msvc 0.53.0 (Apache-2.0 OR MIT)
+https://github.com/microsoft/windows-rs
 ---------------------------------------------------------
 
 zerocopy 0.7.35 (Apache-2.0 OR BSD-2-Clause OR MIT)
@@ -1119,35 +863,7 @@ https://github.com/google/zerocopy
 
 zerocopy-derive 0.8.14 (Apache-2.0 OR BSD-2-Clause OR MIT)
 https://github.com/google/zerocopy
----------------------------------------------------------
 
-zstd 0.13.2 (MIT)
-https://github.com/gyscos/zstd-rs
----------------------------------------------------------
-
-zstd-safe 7.2.1 (Apache-2.0 OR MIT)
-https://github.com/gyscos/zstd-rs
----------------------------------------------------------
-
-zstd-sys 2.0.13+zstd.1.5.6 (Apache-2.0 OR MIT)
-https://github.com/gyscos/zstd-rs
-
----------------------------------------------------------
-
-0BSD
-
----
-
-Permission to use, copy, modify, and/or distribute this software for
-any purpose with or without fee is hereby granted.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL
-WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES
-OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE
-FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY
-DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN
-AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT
-OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 ---------------------------------------------------------
 
 Apache-2.0
@@ -1368,17 +1084,6 @@ Redistribution and use in source and binary forms, with or without modification,
 2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
----------------------------------------------------------
-
-BSL-1.0
-
----
-
-Permission is hereby granted, free of charge, to any person or organization obtaining a copy of the software and accompanying documentation covered by this license (the "Software") to use, reproduce, display, distribute, execute, and transmit the Software, and to prepare derivative works of the Software, and to permit third-parties to whom the Software is furnished to do so, all subject to the following:
-
-The copyright notices in the Software and this entire statement, including the above license grant, this restriction and the following disclaimer, must be included in all copies of the Software, in whole or in part, and all derivative works of the Software, unless such copies or derivative works are solely in the form of machine-executable object code generated by a source language processor.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ---------------------------------------------------------
 
 CC0-1.0

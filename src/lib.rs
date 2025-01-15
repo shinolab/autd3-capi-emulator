@@ -14,9 +14,9 @@ use ptr::*;
 use result::*;
 
 use autd3::controller::ControllerBuilder;
+use autd3::core::link::Link;
 use autd3_emulator::{ControllerBuilderIntoEmulatorExt, Emulator, Record, Recorder};
-use autd3capi_driver::{async_ffi::*, autd3::prelude::*, *};
-use driver::link::Link;
+use autd3capi_driver::{autd3::prelude::*, *};
 
 #[no_mangle]
 pub unsafe extern "C" fn AUTDEmulatorTracingInit() {
@@ -67,37 +67,24 @@ pub unsafe extern "C" fn AUTDEmulatorRecordFrom(
     emulator: EmulatorPtr,
     start_time: DcSysTime,
     f: ConstPtr,
-) -> FfiFuture<ResultRecord> {
-    async move {
-        emulator
-            .record_from(start_time, move |cnt| async move {
-                let f = std::mem::transmute::<ConstPtr, unsafe extern "C" fn(ControllerPtr)>(f);
-                let cnt = cnt.into_boxed_link();
-                let cnt_ptr = ControllerPtr(Box::into_raw(Box::new(cnt)) as _);
-                tokio::task::block_in_place(|| f(cnt_ptr));
-                let cnt = Controller::from_boxed_link(*Box::from_raw(
-                    cnt_ptr.0 as *mut Controller<Box<dyn Link>>,
-                ));
-                Ok(cnt)
-            })
-            .await
-            .into()
-    }
-    .into_ffi()
+) -> ResultRecord {
+    emulator
+        .record_from_take(start_time, move |cnt| {
+            let f = std::mem::transmute::<ConstPtr, unsafe extern "C" fn(ControllerPtr)>(f);
+            let cnt = cnt.into_boxed_link();
+            let cnt_ptr = ControllerPtr(Box::into_raw(Box::new(cnt)) as _);
+            f(cnt_ptr);
+            let cnt: Controller<Recorder> = Controller::from_boxed_link(*Box::from_raw(
+                cnt_ptr.0 as *mut Controller<Box<dyn Link>>,
+            ));
+            Ok(cnt)
+        })
+        .into()
 }
 
 #[no_mangle]
 pub unsafe extern "C" fn AUTDEmulatorRecordFree(record: RecordPtr) {
     let _ = take!(record, Record);
-}
-
-#[no_mangle]
-#[must_use]
-pub unsafe extern "C" fn AUTDEmulatorWaitResultRecord(
-    handle: HandlePtr,
-    future: FfiFuture<ResultRecord>,
-) -> ResultRecord {
-    handle.block_on(future)
 }
 
 #[no_mangle]

@@ -1,4 +1,4 @@
-use autd3capi_driver::{impl_ffi_result, ConstPtr};
+use autd3capi_driver::{impl_result, ConstPtr};
 
 use crate::{InstantPtr, RecordPtr, RmsPtr};
 
@@ -9,7 +9,7 @@ pub struct ResultRecord {
     pub err: ConstPtr,
 }
 
-impl_ffi_result!(ResultRecord, RecordPtr);
+impl_result!(ResultRecord, RecordPtr);
 
 #[repr(C)]
 pub struct ResultInstant {
@@ -18,7 +18,7 @@ pub struct ResultInstant {
     pub err: ConstPtr,
 }
 
-impl_ffi_result!(ResultInstant, InstantPtr);
+impl_result!(ResultInstant, InstantPtr);
 
 #[repr(C)]
 pub struct ResultRms {
@@ -27,4 +27,4 @@ pub struct ResultRms {
     pub err: ConstPtr,
 }
 
-impl_ffi_result!(ResultRms, RmsPtr);
+impl_result!(ResultRms, RmsPtr);

@@ -95,7 +95,6 @@ dependencies = [
  "cargo-license",
  "cargo_metadata 0.18.1",
  "console",
- "csv",
  "glob",
  "reqwest",
  "serde",
