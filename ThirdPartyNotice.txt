@@ -26,35 +26,35 @@ ash 0.38.0+1.3.281 (Apache-2.0 OR MIT)
 https://github.com/ash-rs/ash
 ---------------------------------------------------------
 
-autd3 29.0.0-rc.16 (MIT)
+autd3 29.0.0-rc.17 (MIT)
 https://github.com/shinolab/autd3-rs
 ---------------------------------------------------------
 
-autd3-core 29.0.0-rc.16 (MIT)
+autd3-core 29.0.0-rc.17 (MIT)
 https://github.com/shinolab/autd3-rs
 ---------------------------------------------------------
 
-autd3-derive 29.0.0-rc.16 (MIT)
+autd3-derive 29.0.0-rc.17 (MIT)
 https://github.com/shinolab/autd3-rs
 ---------------------------------------------------------
 
-autd3-driver 29.0.0-rc.16 (MIT)
+autd3-driver 29.0.0-rc.17 (MIT)
 https://github.com/shinolab/autd3-rs
 ---------------------------------------------------------
 
-autd3-emulator 29.0.0-rc.16 (MIT)
+autd3-emulator 29.0.0-rc.17 (MIT)
 https://github.com/shinolab/autd3-emulator
 ---------------------------------------------------------
 
-autd3-firmware-emulator 29.0.0-rc.16 (MIT)
+autd3-firmware-emulator 29.0.0-rc.17 (MIT)
 https://github.com/shinolab/autd3-rs
 ---------------------------------------------------------
 
-autd3capi-driver 29.0.0-rc.16 (MIT)
+autd3capi-driver 29.0.0-rc.17 (MIT)
 https://github.com/shinolab/autd3-capi
 ---------------------------------------------------------
 
-autd3capi-emulator 29.0.0-rc.16 (MIT)
+autd3capi-emulator 29.0.0-rc.17 (MIT)
 https://github.com/shinolab/autd3-capi-emulator
 ---------------------------------------------------------
 
@@ -194,7 +194,7 @@ getrandom 0.2.15 (Apache-2.0 OR MIT)
 https://github.com/rust-random/getrandom
 ---------------------------------------------------------
 
-getset 0.1.3 (MIT)
+getset 0.1.4 (MIT)
 https://github.com/jbaublitz/getset
 ---------------------------------------------------------
 
@@ -238,7 +238,7 @@ hexf-parse 0.2.1 (CC0-1.0)
 https://github.com/lifthrasiir/hexf
 ---------------------------------------------------------
 
-indexmap 2.7.0 (Apache-2.0 OR MIT)
+indexmap 2.7.1 (Apache-2.0 OR MIT)
 https://github.com/indexmap-rs/indexmap
 ---------------------------------------------------------
 
@@ -306,10 +306,6 @@ metal 0.31.0 (Apache-2.0 OR MIT)
 https://github.com/gfx-rs/metal-rs
 ---------------------------------------------------------
 
-minimal-lexical 0.2.1 (Apache-2.0 OR MIT)
-https://github.com/Alexhuszagh/minimal-lexical
----------------------------------------------------------
-
 naga 24.0.0 (Apache-2.0 OR MIT)
 https://github.com/gfx-rs/wgpu/tree/trunk/naga
 ---------------------------------------------------------
@@ -324,10 +320,6 @@ https://github.com/dimforge/nalgebra
 
 ndk-sys 0.5.0+25.2.9519653 (Apache-2.0 OR MIT)
 https://github.com/rust-mobile/ndk
----------------------------------------------------------
-
-nom 7.1.3 (MIT)
-https://github.com/Geal/nom
 ---------------------------------------------------------
 
 nu-ansi-term 0.46.0 (MIT)
@@ -454,7 +446,7 @@ rand_core 0.6.4 (Apache-2.0 OR MIT)
 https://github.com/rust-random/rand
 ---------------------------------------------------------
 
-range-alloc 0.1.3 (Apache-2.0 OR MIT)
+range-alloc 0.1.4 (Apache-2.0 OR MIT)
 https://github.com/gfx-rs/range-alloc
 ---------------------------------------------------------
 
@@ -626,15 +618,11 @@ tracing-subscriber 0.3.19 (MIT)
 https://github.com/tokio-rs/tracing
 ---------------------------------------------------------
 
-tynm 0.1.10 (Apache-2.0 OR MIT)
-https://github.com/azriel91/tynm
----------------------------------------------------------
-
 typenum 1.17.0 (Apache-2.0 OR MIT)
 https://github.com/paholg/typenum
 ---------------------------------------------------------
 
-unicode-ident 1.0.14 ((MIT OR Apache-2.0) AND Unicode-3.0)
+unicode-ident 1.0.15 ((MIT OR Apache-2.0) AND Unicode-3.0)
 https://github.com/dtolnay/unicode-ident
 ---------------------------------------------------------
 
@@ -689,7 +677,7 @@ web-time 1.1.0 (Apache-2.0 OR MIT)
 https://github.com/daxpedda/web-time
 ---------------------------------------------------------
 
-wgpu 24.0.0 (Apache-2.0 OR MIT)
+wgpu 24.0.1 (Apache-2.0 OR MIT)
 https://github.com/gfx-rs/wgpu
 ---------------------------------------------------------
 

@@ -13,11 +13,8 @@ jobs:
     - uses: actions/checkout@v4
       with:
         submodules: true
-    - uses: actions/setup-python@v5
-      with:
-        python-version: "3.13"
     - run: |
-        python3 build.py util check-license
+        cargo make license
 
   create-release:
     needs: [license-check]
@@ -53,18 +50,9 @@ jobs:
           - os: windows-latest
             name: win
             arch: x64
-          - os: windows-latest
-            name: win
-            arch: aarch64
           - os: ubuntu-latest
             name: linux
             arch: x64
-          - os: ubuntu-latest
-            name: linux
-            arch: armv7
-          - os: ubuntu-latest
-            name: linux
-            arch: aarch64
           - os: macos-latest
             name: macos
             arch: aarch64
@@ -83,14 +71,13 @@ jobs:
           result-encoding: string
           script: |
             return 'autd3-'+context.payload.ref.replace(/refs\/tags\//, '')+'-${{ matrix.name }}-${{ matrix.arch }}';
-      - run: |
-          python3 build.py build --release --arch ${{ matrix.arch }}
-          Compress-Archive -Path LICENSE, bin, ThirdPartyNotice.txt -DestinationPath assets-shared.zip
+        
+      - run: cargo make publish
+      - run: Compress-Archive -Path LICENSE, bin, ThirdPartyNotice.txt -DestinationPath assets-shared.zip
         if: ${{ matrix.os == 'windows-latest' }}
-      - run: |
-          python3 build.py build --release --arch ${{ matrix.arch }}
-          tar -zcvf assets-shared.tar.gz bin LICENSE ThirdPartyNotice.txt
+      - run: tar -zcvf assets-shared.tar.gz bin LICENSE ThirdPartyNotice.txt
         if: ${{ matrix.os != 'windows-latest' }}
+      
       - uses: actions/download-artifact@v4
         with:
           name: release_url
