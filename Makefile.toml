@@ -44,9 +44,9 @@ script_runner = "@shell"
 script = '''
 rm -rf bin
 mkdir -p bin
-cp target/debug/*.dll bin
-cp target/debug/*.dylib bin
-cp target/debug/*.so bin
+cp target/debug/*.dll bin || true
+cp target/debug/*.dylib bin || true
+cp target/debug/*.so bin || true
 '''
 
 [tasks.gather-artifacts-release]
@@ -55,9 +55,9 @@ script_runner = "@shell"
 script = '''
 rm -rf bin
 mkdir -p bin
-cp target/release/*.dll bin
-cp target/release/*.dylib bin
-cp target/release/*.so bin
+cp target/release/*.dll bin || true
+cp target/release/*.dylib bin || true
+cp target/release/*.so bin || true
 '''
 
 [tasks.update]
