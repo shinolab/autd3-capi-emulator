@@ -13,9 +13,8 @@ use std::ffi::c_char;
 use ptr::*;
 use result::*;
 
-use autd3::controller::ControllerBuilder;
 use autd3::core::link::Link;
-use autd3_emulator::{ControllerBuilderIntoEmulatorExt, Emulator, Record, Recorder};
+use autd3_emulator::{Emulator, Record, Recorder};
 use autd3capi_driver::{autd3::prelude::*, *};
 
 #[no_mangle]
@@ -46,8 +45,18 @@ pub unsafe extern "C" fn AUTDEmulatorTracingInitWithFile(path: *const c_char) ->
 #[no_mangle]
 #[must_use]
 #[allow(clippy::box_default)]
-pub unsafe extern "C" fn AUTDEmulator(builder: ControllerBuilderPtr) -> EmulatorPtr {
-    take!(builder, ControllerBuilder).into_emulator().into()
+pub unsafe extern "C" fn AUTDEmulator(
+    pos: *const Point3,
+    rot: *const Quaternion,
+    len: u16,
+) -> EmulatorPtr {
+    let pos = vec_from_raw!(pos, Point3, len);
+    let rot = vec_from_raw!(rot, Quaternion, len);
+    Emulator::new(pos.into_iter().zip(rot).map(|(pos, rot)| AUTD3 {
+        pos,
+        rot: UnitQuaternion::from_quaternion(rot),
+    }))
+    .into()
 }
 
 #[no_mangle]
