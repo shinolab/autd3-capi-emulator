@@ -26,35 +26,35 @@ ash 0.38.0+1.3.281 (Apache-2.0 OR MIT)
 https://github.com/ash-rs/ash
 ---------------------------------------------------------
 
-autd3 29.0.0-rc.17 (MIT)
+autd3 29.0.0-rc.18 (MIT)
 https://github.com/shinolab/autd3-rs
 ---------------------------------------------------------
 
-autd3-core 29.0.0-rc.17 (MIT)
+autd3-core 29.0.0-rc.18 (MIT)
 https://github.com/shinolab/autd3-rs
 ---------------------------------------------------------
 
-autd3-derive 29.0.0-rc.17 (MIT)
+autd3-derive 29.0.0-rc.18 (MIT)
 https://github.com/shinolab/autd3-rs
 ---------------------------------------------------------
 
-autd3-driver 29.0.0-rc.17 (MIT)
+autd3-driver 29.0.0-rc.18 (MIT)
 https://github.com/shinolab/autd3-rs
 ---------------------------------------------------------
 
-autd3-emulator 29.0.0-rc.17 (MIT)
+autd3-emulator 29.0.0-rc.18 (MIT)
 https://github.com/shinolab/autd3-emulator
 ---------------------------------------------------------
 
-autd3-firmware-emulator 29.0.0-rc.17 (MIT)
+autd3-firmware-emulator 29.0.0-rc.18 (MIT)
 https://github.com/shinolab/autd3-rs
 ---------------------------------------------------------
 
-autd3capi-driver 29.0.0-rc.17 (MIT)
+autd3capi-driver 29.0.0-rc.18 (MIT)
 https://github.com/shinolab/autd3-capi
 ---------------------------------------------------------
 
-autd3capi-emulator 29.0.0-rc.17 (MIT)
+autd3capi-emulator 29.0.0-rc.18 (MIT)
 https://github.com/shinolab/autd3-capi-emulator
 ---------------------------------------------------------
 
@@ -66,7 +66,7 @@ bit-vec 0.8.0 (Apache-2.0 OR MIT)
 https://github.com/contain-rs/bit-vec
 ---------------------------------------------------------
 
-bitfield-struct 0.10.0 (MIT)
+bitfield-struct 0.10.1 (MIT)
 https://github.com/wrenger/bitfield-struct-rs.git
 ---------------------------------------------------------
 
@@ -82,7 +82,7 @@ block 0.1.6 (MIT)
 http://github.com/SSheldon/rust-block
 ---------------------------------------------------------
 
-bumpalo 3.16.0 (Apache-2.0 OR MIT)
+bumpalo 3.17.0 (Apache-2.0 OR MIT)
 https://github.com/fitzgen/bumpalo
 ---------------------------------------------------------
 
@@ -242,7 +242,7 @@ indexmap 2.7.1 (Apache-2.0 OR MIT)
 https://github.com/indexmap-rs/indexmap
 ---------------------------------------------------------
 
-indicatif 0.17.9 (MIT)
+indicatif 0.17.11 (MIT)
 https://github.com/console-rs/indicatif
 ---------------------------------------------------------
 
@@ -622,7 +622,7 @@ typenum 1.17.0 (Apache-2.0 OR MIT)
 https://github.com/paholg/typenum
 ---------------------------------------------------------
 
-unicode-ident 1.0.15 ((MIT OR Apache-2.0) AND Unicode-3.0)
+unicode-ident 1.0.16 ((MIT OR Apache-2.0) AND Unicode-3.0)
 https://github.com/dtolnay/unicode-ident
 ---------------------------------------------------------
 
