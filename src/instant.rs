@@ -26,7 +26,7 @@ impl From<InstantRecordOption> for autd3_emulator::InstantRecordOption {
     }
 }
 
-#[no_mangle]
+#[unsafe(no_mangle)]
 #[must_use]
 pub unsafe extern "C" fn AUTDEmulatorSoundFieldInstant(
     record: RecordPtr,
@@ -42,7 +42,7 @@ pub unsafe extern "C" fn AUTDEmulatorSoundFieldInstant(
         .into()
 }
 
-#[no_mangle]
+#[unsafe(no_mangle)]
 #[must_use]
 pub unsafe extern "C" fn AUTDEmulatorSoundFieldInstantTimeLen(
     sound_field: InstantPtr,
@@ -51,37 +51,43 @@ pub unsafe extern "C" fn AUTDEmulatorSoundFieldInstantTimeLen(
     sound_field.next_time_len(duration.into()) as _
 }
 
-#[no_mangle]
+#[unsafe(no_mangle)]
 #[must_use]
 pub unsafe extern "C" fn AUTDEmulatorSoundFieldInstantPointsLen(sound_field: InstantPtr) -> u64 {
     sound_field.next_points_len() as _
 }
 
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub unsafe extern "C" fn AUTDEmulatorSoundFieldInstantGetX(sound_field: InstantPtr, x: *mut f32) {
-    sound_field.x_inplace(std::slice::from_raw_parts_mut(
-        x,
-        sound_field.next_points_len(),
-    ));
+    unsafe {
+        sound_field.x_inplace(std::slice::from_raw_parts_mut(
+            x,
+            sound_field.next_points_len(),
+        ));
+    }
 }
 
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub unsafe extern "C" fn AUTDEmulatorSoundFieldInstantGetY(sound_field: InstantPtr, y: *mut f32) {
-    sound_field.y_inplace(std::slice::from_raw_parts_mut(
-        y,
-        sound_field.next_points_len(),
-    ));
+    unsafe {
+        sound_field.y_inplace(std::slice::from_raw_parts_mut(
+            y,
+            sound_field.next_points_len(),
+        ));
+    }
 }
 
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub unsafe extern "C" fn AUTDEmulatorSoundFieldInstantGetZ(sound_field: InstantPtr, z: *mut f32) {
-    sound_field.z_inplace(std::slice::from_raw_parts_mut(
-        z,
-        sound_field.next_points_len(),
-    ));
+    unsafe {
+        sound_field.z_inplace(std::slice::from_raw_parts_mut(
+            z,
+            sound_field.next_points_len(),
+        ));
+    }
 }
 
-#[no_mangle]
+#[unsafe(no_mangle)]
 #[must_use]
 pub unsafe extern "C" fn AUTDEmulatorSoundFieldInstantSkip(
     mut sound_field: InstantPtr,
@@ -92,7 +98,7 @@ pub unsafe extern "C" fn AUTDEmulatorSoundFieldInstantSkip(
         .into()
 }
 
-#[no_mangle]
+#[unsafe(no_mangle)]
 #[must_use]
 pub unsafe extern "C" fn AUTDEmulatorSoundFieldInstantNext(
     mut sound_field: InstantPtr,
@@ -100,15 +106,17 @@ pub unsafe extern "C" fn AUTDEmulatorSoundFieldInstantNext(
     time: *mut u64,
     v: *const *mut f32,
 ) -> ResultStatus {
-    let n = sound_field.next_time_len(duration.into());
-    let time = std::slice::from_raw_parts_mut(time, n as _);
-    let iter = (0..n).map(move |i| v.add(i as _).read());
-    sound_field
-        .next_inplace(duration.into(), false, time, iter)
-        .into()
+    unsafe {
+        let n = sound_field.next_time_len(duration.into());
+        let time = std::slice::from_raw_parts_mut(time, n as _);
+        let iter = (0..n).map(move |i| v.add(i as _).read());
+        sound_field
+            .next_inplace(duration.into(), false, time, iter)
+            .into()
+    }
 }
 
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub unsafe extern "C" fn AUTDEmulatorSoundFieldInstantFree(sound_field: InstantPtr) {
     let _ = take!(sound_field, Instant<'static>);
 }
