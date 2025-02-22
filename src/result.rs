@@ -1,4 +1,4 @@
-use autd3capi_driver::{impl_result, ConstPtr};
+use autd3capi_driver::{ConstPtr, impl_result};
 
 use crate::{InstantPtr, RecordPtr, RmsPtr};
 

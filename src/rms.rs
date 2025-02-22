@@ -22,7 +22,7 @@ impl From<RmsRecordOption> for autd3_emulator::RmsRecordOption {
     }
 }
 
-#[no_mangle]
+#[unsafe(no_mangle)]
 #[must_use]
 pub unsafe extern "C" fn AUTDEmulatorSoundFieldRms(
     record: RecordPtr,
@@ -37,7 +37,7 @@ pub unsafe extern "C" fn AUTDEmulatorSoundFieldRms(
         .into()
 }
 
-#[no_mangle]
+#[unsafe(no_mangle)]
 #[must_use]
 pub unsafe extern "C" fn AUTDEmulatorSoundFieldRmsTimeLen(
     sound_field: RmsPtr,
@@ -46,37 +46,43 @@ pub unsafe extern "C" fn AUTDEmulatorSoundFieldRmsTimeLen(
     sound_field.next_time_len(duration.into()) as _
 }
 
-#[no_mangle]
+#[unsafe(no_mangle)]
 #[must_use]
 pub unsafe extern "C" fn AUTDEmulatorSoundFieldRmsPointsLen(sound_field: RmsPtr) -> u64 {
     sound_field.next_points_len() as _
 }
 
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub unsafe extern "C" fn AUTDEmulatorSoundFieldRmsGetX(sound_field: RmsPtr, x: *mut f32) {
-    sound_field.x_inplace(std::slice::from_raw_parts_mut(
-        x,
-        sound_field.next_points_len(),
-    ));
+    unsafe {
+        sound_field.x_inplace(std::slice::from_raw_parts_mut(
+            x,
+            sound_field.next_points_len(),
+        ));
+    }
 }
 
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub unsafe extern "C" fn AUTDEmulatorSoundFieldRmsGetY(sound_field: RmsPtr, y: *mut f32) {
-    sound_field.y_inplace(std::slice::from_raw_parts_mut(
-        y,
-        sound_field.next_points_len(),
-    ));
+    unsafe {
+        sound_field.y_inplace(std::slice::from_raw_parts_mut(
+            y,
+            sound_field.next_points_len(),
+        ));
+    }
 }
 
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub unsafe extern "C" fn AUTDEmulatorSoundFieldRmsGetZ(sound_field: RmsPtr, z: *mut f32) {
-    sound_field.z_inplace(std::slice::from_raw_parts_mut(
-        z,
-        sound_field.next_points_len(),
-    ));
+    unsafe {
+        sound_field.z_inplace(std::slice::from_raw_parts_mut(
+            z,
+            sound_field.next_points_len(),
+        ));
+    }
 }
 
-#[no_mangle]
+#[unsafe(no_mangle)]
 #[must_use]
 pub unsafe extern "C" fn AUTDEmulatorSoundFieldRmsSkip(
     mut sound_field: RmsPtr,
@@ -87,7 +93,7 @@ pub unsafe extern "C" fn AUTDEmulatorSoundFieldRmsSkip(
         .into()
 }
 
-#[no_mangle]
+#[unsafe(no_mangle)]
 #[must_use]
 pub unsafe extern "C" fn AUTDEmulatorSoundFieldRmsNext(
     mut sound_field: RmsPtr,
@@ -95,15 +101,17 @@ pub unsafe extern "C" fn AUTDEmulatorSoundFieldRmsNext(
     time: *mut u64,
     v: *const *mut f32,
 ) -> ResultStatus {
-    let n = sound_field.next_time_len(duration.into());
-    let time = std::slice::from_raw_parts_mut(time, n as _);
-    let iter = (0..n).map(move |i| v.add(i as _).read());
-    sound_field
-        .next_inplace(duration.into(), false, time, iter)
-        .into()
+    unsafe {
+        let n = sound_field.next_time_len(duration.into());
+        let time = std::slice::from_raw_parts_mut(time, n as _);
+        let iter = (0..n).map(move |i| v.add(i as _).read());
+        sound_field
+            .next_inplace(duration.into(), false, time, iter)
+            .into()
+    }
 }
 
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub unsafe extern "C" fn AUTDEmulatorSoundFieldRmsFree(sound_field: RmsPtr) {
     let _ = take!(sound_field, Rms);
 }

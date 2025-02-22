@@ -1,8 +1,8 @@
 [package]
 name = "autd3capi-emulator"
-version = "29.0.0"
+version = "30.0.0"
 authors = ["shun suzuki <suzuki@hapis.k.u-tokyo.ac.jp>"]
-edition = "2021"
+edition = "2024"
 license = "MIT"
 repository = "https://github.com/shinolab/autd3-capi-emulator"
 
@@ -10,8 +10,8 @@ repository = "https://github.com/shinolab/autd3-capi-emulator"
 crate-type = ["cdylib", "staticlib"]
 
 [dependencies]
-autd3capi-driver = { version = "29.0.0", default-features = false }
-autd3-emulator = { version = "29.0.0", features = ["gpu", "inplace"], default-features = false }
+autd3capi-driver = { version = "30.0.0", default-features = false }
+autd3-emulator = { version = "30.0.0", features = ["gpu", "inplace"], default-features = false }
 tracing-subscriber = { version = "=0.3.19", features = ["ansi", "env-filter"], default-features = false }
 tracing = { version = "=0.1.41", default-features = false }
 bytemuck = { version = "=1.21.0", default-features = false, features = ["derive"] }
