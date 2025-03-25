@@ -31,7 +31,7 @@ pub unsafe extern "C" fn AUTDEmulatorRecordPhase(
 pub unsafe extern "C" fn AUTDEmulatorRecordPulseWidth(
     record: RecordPtr,
     time: *mut u64,
-    v: *const *mut u8,
+    v: *const *mut u16,
 ) {
     unsafe {
         let n = record.drive_cols();
