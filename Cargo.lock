@@ -46,9 +46,9 @@ dependencies = [
 
 [[package]]
 name = "autd3"
-version = "32.0.0"
+version = "32.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1665120f46a3f8e1ab8edb9626ea3c85d7bd04a472c24f44d8bd004c9cd3f0b8"
+checksum = "832ed23c986706a56e79ab618d69e4cb1e27c3eecd1a9864469e12b435e36c7a"
 dependencies = [
  "autd3-core",
  "autd3-derive",
@@ -68,9 +68,9 @@ dependencies = [
 
 [[package]]
 name = "autd3-core"
-version = "32.0.0"
+version = "32.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "789b2d65cb1a71bc2aff3ad8ee7fae3ec1bec9221c8fcd5a4d368e00d80ee0d2"
+checksum = "c870755ca6038fe39d7693330cc8e6a3c3bb491bcff90e9d4efd91b461e82a66"
 dependencies = [
  "autd3-derive",
  "bit-vec",
@@ -88,9 +88,9 @@ dependencies = [
 
 [[package]]
 name = "autd3-derive"
-version = "32.0.0"
+version = "32.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "341770ce30233e265d15e7b47a1bc81de892870b933831c4dc4485d06b28b983"
+checksum = "d00e26b38621040183c1c319251fd6ef1ec733b0f0cacf9af254d53efc70775e"
 dependencies = [
  "quote",
  "syn",
@@ -98,9 +98,9 @@ dependencies = [
 
 [[package]]
 name = "autd3-driver"
-version = "32.0.0"
+version = "32.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "73d6e2c5faf976149c6885c88dcfeb66e6c9a697cb16b362a5928c8dd544dc18"
+checksum = "b5670fbae9577633a203c59287ce55bb6bb96b2435a8a44130df0fd65efffe5f"
 dependencies = [
  "autd3-core",
  "autd3-derive",
@@ -121,9 +121,9 @@ dependencies = [
 
 [[package]]
 name = "autd3-emulator"
-version = "32.0.0"
+version = "32.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "811e2f110abe0b49dedf5e82ddffc0982e8154507a1437a17629cd19fe38f83f"
+checksum = "82a38b5f78ea72a6da23b454b1e91893762164e209dac5245239dfb5c2f1a6c9"
 dependencies = [
  "autd3",
  "autd3-core",
@@ -145,9 +145,9 @@ dependencies = [
 
 [[package]]
 name = "autd3-firmware-emulator"
-version = "32.0.0"
+version = "32.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4a90b8c377a53ff143613d4563d9ed72ee0d46413bbf047671eacadb7d4c3eb8"
+checksum = "72caea02aba689a05fd59b3d5246deafb813da1d3614cd6125967a295a2b90ce"
 dependencies = [
  "autd3-driver",
  "bitfield-struct",
@@ -158,9 +158,9 @@ dependencies = [
 
 [[package]]
 name = "autd3capi-driver"
-version = "32.0.0"
+version = "32.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "21aa739065f9d35cf5ad377897db3ff5a076f7c323265127f9ef7c90473c0645"
+checksum = "0007ba13a1c714b8202e9e4cc1eefc477451b14575578c6594a6b7b36c4a061e"
 dependencies = [
  "autd3",
  "autd3-core",
@@ -171,7 +171,7 @@ dependencies = [
 
 [[package]]
 name = "autd3capi-emulator"
-version = "32.0.0"
+version = "32.0.1"
 dependencies = [
  "autd3-emulator",
  "autd3capi-driver",
