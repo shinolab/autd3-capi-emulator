@@ -1,11 +1,14 @@
 use autd3_emulator::{Emulator, Instant, Record, Recorder, Rms};
-use autd3capi_driver::{autd3::Controller, impl_ptr, libc};
+use autd3capi_driver::{
+    autd3::{Controller, firmware::Latest},
+    impl_ptr, libc,
+};
 
 #[derive(Clone, Copy)]
 #[repr(C)]
 pub struct EmulatorControllerPtr(pub *const libc::c_void);
 
-impl_ptr!(EmulatorControllerPtr, Controller<Recorder>);
+impl_ptr!(EmulatorControllerPtr, Controller<Recorder, Latest>);
 
 #[derive(Clone, Copy)]
 #[repr(C)]
