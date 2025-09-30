@@ -8,7 +8,7 @@ mod range;
 mod result;
 mod rms;
 
-use std::ffi::c_char;
+use std::{ffi::c_char, ops::Deref};
 
 use ptr::*;
 use result::*;
@@ -70,7 +70,8 @@ pub unsafe extern "C" fn AUTDEmulatorFree(emulator: EmulatorPtr) {
 #[unsafe(no_mangle)]
 #[must_use]
 pub unsafe extern "C" fn AUTDEmulatorGeometry(emulator: EmulatorPtr) -> GeometryPtr {
-    GeometryPtr(emulator.geometry() as *const _ as _)
+    let geo: &Geometry = emulator.deref();
+    GeometryPtr(geo as *const _ as _)
 }
 
 #[unsafe(no_mangle)]
