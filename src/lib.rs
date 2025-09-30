@@ -8,7 +8,7 @@ mod range;
 mod result;
 mod rms;
 
-use std::{ffi::c_char, ops::Deref};
+use std::ops::Deref;
 
 use ptr::*;
 use result::*;
@@ -19,31 +19,6 @@ use autd3capi_driver::{
     autd3::{firmware::V12_1, prelude::*},
     *,
 };
-
-#[unsafe(no_mangle)]
-pub unsafe extern "C" fn AUTDEmulatorTracingInit() {
-    tracing_subscriber::fmt()
-        .with_env_filter(tracing_subscriber::EnvFilter::from_default_env())
-        .init();
-}
-
-#[unsafe(no_mangle)]
-pub unsafe extern "C" fn AUTDEmulatorTracingInitWithFile(path: *const c_char) -> ResultStatus {
-    let path = validate_cstr!(path, AUTDStatus, ResultStatus);
-    std::fs::File::options()
-        .append(true)
-        .create(true)
-        .open(path)
-        .map(|f| {
-            tracing_subscriber::fmt()
-                .with_writer(f)
-                .with_env_filter(tracing_subscriber::EnvFilter::from_default_env())
-                .with_ansi(false)
-                .init();
-            AUTDStatus::AUTDTrue
-        })
-        .into()
-}
 
 #[unsafe(no_mangle)]
 #[must_use]
