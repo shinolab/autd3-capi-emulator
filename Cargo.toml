@@ -12,6 +12,6 @@ crate-type = ["cdylib", "staticlib"]
 [dependencies]
 autd3capi-driver = { git = "https://github.com/shinolab/autd3-capi.git", tag = "v36.0.1", default-features = false }
 autd3-emulator = { version = "36.0.1", features = ["gpu", "inplace"], default-features = false }
-tracing-subscriber = { version = "=0.3.19", features = ["ansi", "env-filter"], default-features = false }
+tracing-subscriber = { version = "=0.3.20", features = ["ansi", "env-filter"], default-features = false }
 tracing = { version = "=0.1.41", default-features = false }
 bytemuck = { version = "=1.23.1", default-features = false, features = ["derive"] }
