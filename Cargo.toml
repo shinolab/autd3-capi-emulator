@@ -12,4 +12,4 @@ crate-type = ["cdylib", "staticlib"]
 [dependencies]
 autd3capi-driver = { git = "https://github.com/shinolab/autd3-capi.git", tag = "v36.0.2", default-features = false }
 autd3-emulator = { version = "36.0.2", features = ["gpu", "inplace"], default-features = false }
-bytemuck = { version = "=1.23.2", default-features = false, features = ["derive"] }
+bytemuck = { version = "=1.24.0", default-features = false, features = ["derive"] }
