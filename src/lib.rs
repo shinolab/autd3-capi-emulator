@@ -13,10 +13,7 @@ use result::*;
 
 use autd3::core::link::Link;
 use autd3_emulator::{Emulator, Record, Recorder};
-use autd3capi_driver::{
-    autd3::{firmware::V12_1, prelude::*},
-    *,
-};
+use autd3capi_driver::{autd3::prelude::*, *};
 
 #[unsafe(no_mangle)]
 #[must_use]
@@ -60,8 +57,8 @@ pub unsafe extern "C" fn AUTDEmulatorRecordFrom(
                 let cnt = cnt.into_boxed_link();
                 let cnt_ptr = ControllerPtr(Box::into_raw(Box::new(cnt)) as _);
                 f(cnt_ptr);
-                let cnt: Controller<Recorder, V12_1> = Controller::from_boxed_link(*Box::from_raw(
-                    cnt_ptr.0 as *mut Controller<Box<dyn Link>, V12_1>,
+                let cnt: Controller<Recorder> = Controller::from_boxed_link(*Box::from_raw(
+                    cnt_ptr.0 as *mut Controller<Box<dyn Link>>,
                 ));
                 Ok(cnt)
             })

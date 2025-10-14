@@ -10,7 +10,6 @@ pub struct InstantRecordOption {
     pub sound_speed: f32,
     pub time_step: Duration,
     pub memory_limits_hint_mb: u64,
-    pub gpu: bool,
 }
 
 impl From<InstantRecordOption> for autd3_emulator::InstantRecordOption {
@@ -19,7 +18,6 @@ impl From<InstantRecordOption> for autd3_emulator::InstantRecordOption {
             sound_speed: value.sound_speed,
             time_step: value.time_step.into(),
             memory_limits_hint_mb: value.memory_limits_hint_mb as _,
-            gpu: value.gpu,
         }
     }
 }
