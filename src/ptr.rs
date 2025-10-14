@@ -1,15 +1,17 @@
+use std::ffi::c_void;
+
 use autd3_emulator::{Emulator, Instant, Record, Rms};
-use autd3capi_driver::{impl_ptr, libc};
+use autd3capi_driver::impl_ptr;
 
 #[derive(Clone, Copy)]
 #[repr(C)]
-pub struct EmulatorPtr(pub *const libc::c_void);
+pub struct EmulatorPtr(pub *const c_void);
 
 impl_ptr!(EmulatorPtr, Emulator);
 
 #[derive(Clone, Copy)]
 #[repr(C)]
-pub struct RecordPtr(pub *const libc::c_void);
+pub struct RecordPtr(pub *const c_void);
 
 impl_ptr!(RecordPtr, Record);
 
@@ -21,12 +23,12 @@ impl RecordPtr {
 
 #[derive(Clone, Copy)]
 #[repr(C)]
-pub struct InstantPtr(pub *const libc::c_void);
+pub struct InstantPtr(pub *const c_void);
 
 impl_ptr!(InstantPtr, Instant<'static>);
 
 #[derive(Clone, Copy)]
 #[repr(C)]
-pub struct RmsPtr(pub *const libc::c_void);
+pub struct RmsPtr(pub *const c_void);
 
 impl_ptr!(RmsPtr, Rms);

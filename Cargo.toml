@@ -1,15 +1,14 @@
 [package]
 name = "autd3capi-emulator"
-version = "36.0.2"
+version = "37.0.0-alpha.2"
 authors = ["shun suzuki <suzuki@hapis.k.u-tokyo.ac.jp>"]
 edition = "2024"
 license = "MIT"
 repository = "https://github.com/shinolab/autd3-capi-emulator"
 
 [lib]
-crate-type = ["cdylib", "staticlib"]
+crate-type = ["cdylib"]
 
 [dependencies]
-autd3capi-driver = { git = "https://github.com/shinolab/autd3-capi.git", tag = "v36.0.2", default-features = false }
-autd3-emulator = { version = "36.0.2", features = ["gpu", "inplace"], default-features = false }
-bytemuck = { version = "=1.24.0", default-features = false, features = ["derive"] }
+autd3capi-driver = { git = "https://github.com/shinolab/autd3-capi.git", version = "37.0.0-alpha.2", default-features = false }
+autd3-emulator = { version = "37.0.0-alpha.2", features = [], default-features = false }

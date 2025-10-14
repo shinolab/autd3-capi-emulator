@@ -66,9 +66,9 @@ jobs:
             return 'autd3-'+context.payload.ref.replace(/refs\/tags\//, '')+'-${{ matrix.name }}-${{ matrix.arch }}';
         
       - run: cargo make publish
-      - run: Compress-Archive -Path LICENSE, bin, ThirdPartyNotice.txt -DestinationPath assets-shared.zip
+      - run: Compress-Archive -Path LICENSE, bin -DestinationPath assets-shared.zip
         if: ${{ matrix.os == 'windows-latest' }}
-      - run: tar -zcvf assets-shared.tar.gz bin LICENSE ThirdPartyNotice.txt
+      - run: tar -zcvf assets-shared.tar.gz bin LICENSE
         if: ${{ matrix.os != 'windows-latest' }}
       
       - uses: actions/download-artifact@v4
