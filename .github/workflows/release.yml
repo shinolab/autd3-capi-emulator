@@ -63,7 +63,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           result-encoding: string
           script: |
-            return 'autd3-'+context.payload.ref.replace(/refs\/tags\//, '')+'-${{ matrix.name }}-${{ matrix.arch }}';
+            return 'autd3-capi-emulator-'+context.payload.ref.replace(/refs\/tags\//, '')+'-${{ matrix.name }}-${{ matrix.arch }}';
         
       - run: cargo make publish
       - run: Compress-Archive -Path LICENSE, bin -DestinationPath assets-shared.zip
