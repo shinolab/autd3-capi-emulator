@@ -61,7 +61,7 @@ dependencies = [
 [[package]]
 name = "autd3capi-driver"
 version = "37.0.0"
-source = "git+https://github.com/shinolab/autd3-capi.git#fa77f5396386d7f3a05502cdf84f3d33dab0f300"
+source = "git+https://github.com/shinolab/autd3-capi.git#9f80941b1d13559cb45abd1fe07b3f14dfaa4fbf"
 dependencies = [
  "autd3",
  "autd3-core",
